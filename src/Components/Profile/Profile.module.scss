@@ -1,0 +1,133 @@
+.cardContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  //z-index: 11;
+  background: white;
+  z-index: 11;
+  border-radius: 8px ;
+
+  &::after {
+	content: "";
+	position: absolute;
+	z-index: 10;
+	left: -15px;
+	top: -15px;
+	width: 100%;
+	height: 100%;
+	border-radius: 8px ;
+	background: linear-gradient(-45deg, rgba(76, 83, 119, 0.4) 0%, rgba(76, 86, 119, 0.01) 100%);
+  }
+
+  &::before {
+	content: "";
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 8px ;
+	box-shadow: 10px 10px 15px rgb(0 0 0 / 5%);
+  }
+
+  .photoContainer {
+	width: 480px;
+	height: 335px;
+	border-radius: 8px;
+	z-index: 11;
+	background-color: white;
+	overflow: hidden;
+	position: relative;
+
+	&::before {
+	  content: '';
+	  position: absolute;
+	  left: -25%;
+	  bottom: -63%;
+	  width: 100%;
+	  height: 70%;
+	  background: #fff;
+	  transform: rotate(12deg);
+	}
+
+	&::after {
+	  content: '';
+	  position: absolute;
+	  left: auto;
+	  right: -25%;
+	  bottom: -63%;
+	  width: 100%;
+	  height: 70%;
+	  background: #fff;
+	  transform: rotate(-8deg);
+	}
+
+	img {
+	  border-radius: 8px 8px 0 0;
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+	}
+
+
+	@media (min-width: 1120px) {
+	  height: 55%;
+	}
+
+  }
+
+  .name {
+	z-index: 11;
+	background-color: white;
+	font-size: 34px;
+	color: #323232;
+	line-height: 32px;
+	font-weight: 500;
+	text-align: center;
+  }
+
+  .animatedText{
+	z-index: 11;
+	background-color: white;
+	font-size: 22px;
+	line-height: 20px;
+	color: #323232;
+	font-weight: 500;
+	text-align: center;
+	padding:  10px 0;
+  }
+
+  .contactsContainer{
+	z-index: 11;
+	background-color: white;
+	text-align: center;
+
+	a {
+	  font-size: 20px;
+	  padding: 0 4px;
+	  color: #0d1767;
+	  transition: 0.3s;
+
+	  &:hover {
+		transition: 0.3s;
+		color: #4254da;
+	  }
+	}
+  }
+
+  .downloadCV {
+	padding-top: 30px;
+	z-index: 11;
+	text-align: center;
+	background: white;
+	border-radius: 0 0 8px 8px ;
+	a {
+	  text-decoration: none;
+	  font-size: 20px;
+	  padding: 0 4px;
+	  color: #0d1767;
+	}
+  }
+}

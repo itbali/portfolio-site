@@ -1,0 +1,66 @@
+.navBar {
+  border-radius: 5px;
+  margin-right: 8px;
+  padding: 0;
+  overflow: clip;
+  width: fit-content;
+  position: relative;
+  z-index: 21;
+
+  li {
+	height: 72px;
+	width: 72px;
+	background-color: whitesmoke;
+	list-style: none;
+	position: relative;
+	font-weight: 500;
+
+	&::after {
+	  position: absolute;
+	  content: "";
+	  bottom: 0;
+	  right: 0;
+	  height: 1px;
+	  width: 90%;
+	  background: linear-gradient(to right bottom, rgb(255, 255, 255) 0%, rgb(71, 71, 115) 300%);
+	}
+  }
+}
+.inactive {
+  padding: 10%;
+  color: #0d1767;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.3s;
+
+  svg {
+	padding: 10px;
+  }
+
+  &:hover svg {
+	color: #4254da;
+	transition: 0.3s;
+  }
+}
+
+.active {
+  padding: 10%;
+  color: #0d1767;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.3s;
+
+  svg {
+	padding: 10px;
+	color: #0059b2;
+	font-size: 20px;
+  }
+
+  &:hover svg {
+	transition: 0.3s;
+  }
+}
