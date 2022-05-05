@@ -45,24 +45,6 @@
   }
 }
 
-.infoList {
-  padding: 30px 10px;
-  font-size: 20px;
-  list-style: none;
-  color: #0d1767;
-
-  strong {
-	margin-right: 55px;
-	position: relative;
-
-	&::after {
-	  content: ". . . . ";
-	  position: absolute;
-	  right: -45px;
-	}
-  }
-}
-
 .factsContainer {
   margin-top: 40px;
   display: flex;
@@ -71,7 +53,7 @@
   .unit {
 	position: relative;
 	padding: 3%;
-	flex-basis: 25%;
+	flex-basis: 24%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

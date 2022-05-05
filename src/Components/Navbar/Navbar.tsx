@@ -2,7 +2,7 @@ import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faAddressCard, faBook, faBriefcase, faEnvelopesBulk, faCloud} from "@fortawesome/free-solid-svg-icons";
 import style from './Navbar.module.scss'
-import {Link, NavLink, Outlet} from "react-router-dom";
+import {NavLink, Outlet} from "react-router-dom";
 
 
 const Navbar = () => {

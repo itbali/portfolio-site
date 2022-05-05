@@ -89,7 +89,7 @@
 	width: 20px;
 	height: 20px;
 	background: rgba(255, 255, 255, 0.2);
-	animation: animate 19s linear infinite;
+	animation: animate 19s ease-in-out infinite;
   }
 
   li:nth-child(0) {
