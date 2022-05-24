@@ -1,5 +1,6 @@
 import React from 'react';
 import {v1} from "uuid";
+import s from './works.module.scss'
 import work1 from "../../../assets/img/work1Social.jpeg"
 import work2 from "../../../assets/img/work2TicTacToe.png"
 import work3 from "../../../assets/img/work3TODO.png"
@@ -42,17 +43,21 @@ const myWorksContainerArray: myWorksContainerArrayType = [
 
 export const MyWorksContainer = () => {
     return (
-        <div>
+        <>
             {myWorksContainerArray.map(el => <React.Fragment key={el.id}>
-                <h2>{el.title}</h2>
-                <div className={''}>
-                    <img src={el.title} alt=""/>
-                    <a href={el.code}>Code</a>
-                    <a href={el.page}>Page</a>
+                <div className={s.singleUnit}>
+                    <span className={s.title}>{el.title}</span>
+                    <div className={s.imgContainer}>
+                        <img src={el.img} alt=""/>
+                        <nav className={s.imgContainerNav}>
+                            <a href={el.code}>Code</a>
+                            <a href={el.page}>Page</a>
+                        </nav>
+                    </div>
                 </div>
             </React.Fragment>)
             }
-        </div>
+        </>
     );
 };
 
