@@ -1,0 +1,51 @@
+.container {
+  margin: 30px 0 60px;
+  background: rgb(255, 255, 255);
+  border-radius: 0 8px 8px 0;
+  padding: 20px;
+  overflow: scroll;
+  overflow-x: hidden;
+
+  .title {
+	margin-bottom: 30px;
+	padding: 0 0 30px;
+	position: relative;
+	font-size: 20px;
+	color: #0d1767;
+	line-height: 60px;
+	font-weight: bold;
+
+	&::before {
+	  content: "";
+	  position: absolute;
+	  left: -10px;
+	  top: 0;
+	  width: 60px;
+	  height: 30px;
+	  border-radius: 6px 0 0 6px;
+	  background: linear-gradient(to right, rgba(76, 85, 119, 0.4) 0%, rgba(76, 119, 83, .01) 100%);
+	}
+
+	&::after {
+	  content: "";
+	  position: absolute;
+	  left: -20px;
+	  right: 0;
+	  bottom: 0;
+	  height: 1px;
+	  background: radial-gradient(ellipse at left, #ddd 0%, rgba(255, 255, 255, 0) 70%);
+	}
+
+  }
+
+  .innerText {
+	position: relative;
+	font-size: 20px;
+	color: #0d1767;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}

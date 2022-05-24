@@ -28,7 +28,7 @@ const Navbar = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink className={({isActive}) => (isActive ? style.active : style.inactive)} to="contact">
+                    <NavLink className={({isActive}) => (isActive ? style.active : style.inactive)} to="/contacts">
                         <FontAwesomeIcon icon={faEnvelopesBulk}/>
                         <span>Contact</span>
                     </NavLink>
