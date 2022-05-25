@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.scss';
 import Navbar from "./сomponents/Navbar/Navbar";
 import {Profile} from "./сomponents/Profile/Profile";
@@ -12,6 +12,7 @@ import {Contacts} from "./сomponents/Routes/Contacts/Contacts";
 
 
 export const App = () => {
+
     const location = useLocation()
     const [isMobile, setIsMobile] = useState(false)
     window.addEventListener('resize',()=>{
@@ -19,6 +20,10 @@ export const App = () => {
             setIsMobile(true)
         } else setIsMobile(false)
     })
+
+    useEffect(()=>{
+        console.log(isMobile)
+    },[isMobile])
 
     return (
         <div>
