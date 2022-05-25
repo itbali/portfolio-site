@@ -7,7 +7,7 @@ import {NavLink, Outlet} from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <div>
+        <>
             <ul className={style.navBar}>
                 <li>
                     <NavLink className={({isActive}) => (isActive ? style.active : style.inactive)} to="/about">
@@ -42,7 +42,7 @@ const Navbar = () => {
             </ul>
 
             <Outlet/>
-        </div>
+        </>
     );
 };
 
