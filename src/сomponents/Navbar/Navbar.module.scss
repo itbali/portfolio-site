@@ -98,6 +98,15 @@
 		border-radius: 0 0 10px 0;
 		margin-right: auto;
 		margin-top: 0!important;
+		&::after {
+		  position: absolute;
+		  content: "";
+		  bottom: 0;
+		  left: 0;
+		  height: 100%;
+		  width: 1px;
+		  background: linear-gradient(to right bottom, rgb(255, 255, 255) 0%, rgb(71, 71, 115) 300%);
+		}
 	  }
 	  &::after{
 		content: none;
