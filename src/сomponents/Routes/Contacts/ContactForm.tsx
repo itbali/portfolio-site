@@ -24,6 +24,7 @@ const ContactForm = () => {
                   /* and other goodies */
               }) => (
                 <form className={s.form} onSubmit={handleSubmit}>
+                    <label htmlFor={"email"} className={s.innerText}>E-mail</label>
                     <input
                         type="email"
                         name="email"
@@ -31,6 +32,7 @@ const ContactForm = () => {
                         onBlur={handleBlur}
                         value={values.email}
                     />
+                    <label htmlFor={"tel"} className={s.innerText}>Phone number</label>
                     <input
                         type="tel"
                         name="tel"
@@ -38,7 +40,8 @@ const ContactForm = () => {
                         onBlur={handleBlur}
                         value={values.tel}
                     />
-                    <input
+                    <label htmlFor={"message"} className={s.innerText}>Message</label>
+                    <textarea
                         name="message"
                         onChange={handleChange}
                         onBlur={handleBlur}
