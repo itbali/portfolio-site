@@ -42,6 +42,20 @@
 	font-size: 20px;
 	position: relative;
   }
+
+  .forIframe {
+	border: 1px solid #0d1767;
+	border-radius: 5px;
+	height: fit-content;
+	margin: 10px auto;
+	position: relative;
+	width: fit-content;
+
+	iframe {
+	  border-radius: 5px;
+	  margin: 0;
+	}
+  }
 }
 
 .form {
@@ -52,14 +66,46 @@
   padding-top: 20px;
 
   input {
+	border: 1px solid #0d1767;
+	border-radius: 3px;
 	margin-bottom: 15px;
 	margin-top: 5px;
+	padding: 5px;
   }
 
   textarea {
+	border: 1px solid #0d1767;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	margin-top: 5px;
 	max-height: 100px;
 	max-width: 600px;
-	min-width: 500px;
+	min-width: 300px;
 	overflow: scroll;
+	padding: 5px;
+	resize: none;
+  }
+
+  button {
+	animation: shading 4s infinite;
+	background-color: #0d1767;
+	border: 1px solid #4254da;
+	border-radius: 5px;
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 5px;
+  }
+}
+
+@keyframes shading {
+  0% {
+	box-shadow: 0 0 3px navy;
+  }
+  50% {
+	box-shadow: 0 0 15px #42a5da;
+  }
+  100% {
+	box-shadow: 0 0 3px navy;
   }
 }

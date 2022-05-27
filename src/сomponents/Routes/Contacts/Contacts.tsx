@@ -10,7 +10,9 @@ export const Contacts = () => {
             <p className={s.innerText}>I am open for work and ready to answer you. Send me a message or contact via
                                        Form</p>
             <ContactForm/>
-            <GoogleMap/>
+            <div className={s.forIframe}>
+                <GoogleMap/>
+            </div>
         </div>
     );
 };
