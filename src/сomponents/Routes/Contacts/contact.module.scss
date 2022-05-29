@@ -49,7 +49,7 @@
 	height: fit-content;
 	margin: 10px auto;
 	position: relative;
-	width: fit-content;
+	width: inherit;
 
 	iframe {
 	  border-radius: 5px;
@@ -87,7 +87,7 @@
   }
 
   button {
-	animation: shading 4s infinite;
+	//animation: shading 4s infinite;
 	background-color: #0d1767;
 	border: 1px solid #4254da;
 	border-radius: 5px;
