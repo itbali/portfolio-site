@@ -55,20 +55,28 @@
 .fade-exit.fade-exit-active {
   opacity: 0;
   transform: translateY(-200px);
-
   transition: opacity 500ms ease-out, transform 500ms ease;
+}
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+  width: 100%;
 }
 
 /*main container*/
 .container {
   align-items: center;
+  //height: 84vh;
   display: flex;
-  height: 84vh;
+  justify-content: center;
+  //max-height: 674px;
+  //max-width: 1268px;
   margin: 0 auto;
-  max-height: 674px;
-  max-width: 1268px;
   position: relative;
-  transform: translateY(10%);
 }
 
 @media (max-width: 1120px) {
@@ -83,6 +91,24 @@
 	.animeContainer {
 	  overflow: visible;
 	}
+  }
+}
+
+@media (min-width: 1768px) {
+  .container {
+	transform: scale(1.2);
+  }
+}
+
+@media (min-width: 2100px) {
+  .container {
+	transform: scale(1.33);
+  }
+}
+
+@media (min-width: 2500px) {
+  .container {
+	transform: scale(1.5);
   }
 }
 
