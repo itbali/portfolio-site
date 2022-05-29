@@ -83,20 +83,14 @@
   .container {
 	flex-direction: column;
 	height: 100%;
-	//width: 100%;
 	margin: 10vh 3vw;
 	overflow: visible;
 	transform: none;
+	width: 85vw;
 
 	.animeContainer {
 	  overflow: visible;
 	}
-  }
-}
-
-@media (min-width: 1768px) {
-  .container {
-	transform: scale(1.2);
   }
 }
 
