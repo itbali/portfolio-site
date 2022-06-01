@@ -25,46 +25,44 @@ export const Profile = () => {
 
 
   return (
-    <div>
-      <div className={s.cardContainer}>
+    <div className={s.cardContainer}>
 
-        <div className={s.photoContainer}>
+      <div className={s.photoContainer}>
 
-          <img className={s.profilePhoto} src={photo} alt=""/>
+        <img className={s.profilePhoto} src={photo} alt=""/>
 
+      </div>
+      <div className={s.descriptionContainer}>
+        <div className={s.name}>Alex Duzhev</div>
+        <div className={s.animatedText} onClick={onWeatherClickHandler}>
+          Front-end developer
+          {/*<AnimatedText/>*/}
         </div>
-        <div className={s.descriptionContainer}>
-          <div className={s.name}>Alex Duzhev</div>
-          <div className={s.animatedText} onClick={onWeatherClickHandler}>
-            Front-end developer
-            {/*<AnimatedText/>*/}
-          </div>
-          <div className={s.contactsContainer}>
-            <a href="https://github.com/itbali">
-              <FaGithubSquare/>
-            </a>
-            <a href="https://www.codewars.com/users/itbali">
-              <SiCodewars/>
-            </a>
-            <a href="https://www.linkedin.com/in/alex-dyuzhev-21a217231/">
-              <FaLinkedin/>
-            </a>
-            <a href="https://t.me/xopycaku">
-              <FaTelegram/>
-            </a>
-            <a href="https://wa.me/79992156384">
-              <FaWhatsappSquare/>
-            </a>
-          </div>
-          <div className={s.downloadCV}>
-            <a href="https://docs.google.com">
-              <span>Download CV </span>
-              <FaCloudDownloadAlt/>
-            </a>
-          </div>
+        <div className={s.contactsContainer}>
+          <a href="https://github.com/itbali">
+            <FaGithubSquare/>
+          </a>
+          <a href="https://www.codewars.com/users/itbali">
+            <SiCodewars/>
+          </a>
+          <a href="https://www.linkedin.com/in/alex-dyuzhev-21a217231/">
+            <FaLinkedin/>
+          </a>
+          <a href="https://t.me/xopycaku">
+            <FaTelegram/>
+          </a>
+          <a href="https://wa.me/79992156384">
+            <FaWhatsappSquare/>
+          </a>
+        </div>
+        <div className={s.downloadCV}>
+          <a href="https://docs.google.com">
+            <span>Download CV </span>
+            <FaCloudDownloadAlt/>
+          </a>
         </div>
       </div>
-
     </div>
+
   );
 };

@@ -14,17 +14,21 @@ import {Contacts} from "./сomponents/Routes/Contacts/Contacts";
 export const App = () => {
 
   const location = useLocation()
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobileWindow, setIsMobileWindow] = useState(false)
   window.addEventListener('resize', () => {
     if (window.innerWidth < 1120) {
-      setIsMobile(true)
-    } else setIsMobile(false)
+      setIsMobileWindow(true)
+    } else setIsMobileWindow(false)
   })
 
   useEffect(() => {
-    console.log(isMobile)
-  }, [isMobile])
-
+    console.log(isMobileWindow)
+  }, [isMobileWindow])
+  useEffect(() => {
+    if (window.innerWidth < 1120) {
+      setIsMobileWindow(true)
+    } else setIsMobileWindow(false)
+  }, [])
   return (
     <div className={"wrapper"}>
       <Background/>
@@ -32,19 +36,26 @@ export const App = () => {
       <div className="container">
         <Navbar/>
         <Profile/>
-        <div className={'animeContainer'}>
-          <TransitionGroup component={null}>
-            <CSSTransition key={location.key} classNames={"fade"} timeout={1000}>
-              <Routes>
-                <Route path="*" element={<About/>}/>
-                <Route path="/about" element={<About/>}/>
-                <Route path="/skills" element={<Skills/>}/>
-                <Route path="/works" element={<Works/>}/>
-                <Route path="/contacts" element={<Contacts/>}/>
-              </Routes>
-            </CSSTransition>
-          </TransitionGroup>
-        </div>
+        {isMobileWindow
+          ? <>
+            <About/>
+            <Skills/>
+            <Works/>
+            <Contacts/>
+          </>
+          : <div className={'animeContainer'}>
+            <TransitionGroup component={null}>
+              <CSSTransition key={location.key} classNames={"fade"} timeout={1000}>
+                <Routes>
+                  <Route path="*" element={<About/>}/>
+                  <Route path="/about" element={<About/>}/>
+                  <Route path="/skills" element={<Skills/>}/>
+                  <Route path="/works" element={<Works/>}/>
+                  <Route path="/contacts" element={<Contacts/>}/>
+                </Routes>
+              </CSSTransition>
+            </TransitionGroup>
+          </div>}
       </div>
     </div>
 

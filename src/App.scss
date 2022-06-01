@@ -25,14 +25,15 @@
 
 .animeContainer {
   //height: 100%;
+  border-radius: 0 8px 8px 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin: -8vh 0 0 0;
   max-height: 685px;
-  max-width: 50vw;
   overflow: hidden;
   padding-top: 8vh;
+  width: 50vw;
 }
 
 .fade-enter {
@@ -80,6 +81,9 @@
 }
 
 @media (max-width: 1120px) {
+  .wrapper {
+	height: 100%;
+  }
   .container {
 	flex-direction: column;
 	height: 100%;
