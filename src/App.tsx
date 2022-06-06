@@ -14,6 +14,8 @@ import {Contacts} from "./сomponents/Routes/Contacts/Contacts";
 export const App = () => {
 
   const location = useLocation()
+  // const isMobile = useSelector((state: RootState) => state.)
+
   const [isMobileWindow, setIsMobileWindow] = useState(false)
   window.addEventListener('resize', () => {
     if (window.innerWidth < 1120) {

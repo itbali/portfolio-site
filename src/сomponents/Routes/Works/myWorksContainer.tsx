@@ -9,56 +9,68 @@ import work5 from "../../../assets/img/work5JSTodoList.png"
 
 type myWorksContainerArrayType = Array<singleWork>
 type singleWork = {
-    id: string
-    title: string
-    img: string
-    code: string
-    page: string
+  id: string
+  title: string
+  img: string
+  code: string
+  page: string
 }
 const myWorksContainerArray: myWorksContainerArrayType = [
-    {
-        id: v1(),
-        title: 'Social Network',
-        img: work1,
-        code: '',
-        page: ''
-    },
-    {
-        id: v1(),
-        title: 'Tic-Tac-Toe game',
-        img: work2,
-        code: 'https://github.com/itbali/tic-tac-toe',
-        page: 'https://itbali.github.io/tic-tac-toe/'
-    },
-    {id: v1(), title: 'React TODO SPA', img: work3, code: 'https://github.com/itbali/todolist-ts-01', page: ''},
-    {id: v1(), title: 'Memo cards', img: work4, code: '', page: ''},
-    {
-        id: v1(),
-        title: 'JS TODO list',
-        img: work5,
-        code: 'https://github.com/itbali/todo-list',
-        page: 'https://itbali.github.io/todo-list/'
-    },
+  {
+    id: v1(),
+    title: 'Social Network',
+    img: work1,
+    code: 'https://github.com/itbali/Social_Network',
+    page: 'https://itbali.github.io/Social_Network'
+  },
+  {
+    id: v1(),
+    title: 'Tic-Tac-Toe game',
+    img: work2,
+    code: 'https://github.com/itbali/tic-tac-toe',
+    page: 'https://itbali.github.io/tic-tac-toe/'
+  },
+  {
+    id: v1(),
+    title: 'React TODO SPA',
+    img: work3,
+    code: 'https://github.com/itbali/todolist-ts-01',
+    page: 'http://itbali.github.io/todolist-ts-01'
+  },
+  {
+    id: v1(),
+    title: 'Memo cards',
+    img: work4,
+    code: 'https://github.com/BrilAlex/study-cards/tree/LehaFin',
+    page: 'https://brilalex.github.io/study-cards'
+  },
+  {
+    id: v1(),
+    title: 'JS TODO list',
+    img: work5,
+    code: 'https://github.com/itbali/todo-list',
+    page: 'https://itbali.github.io/todo-list/'
+  },
 ]
 
 export const MyWorksContainer = () => {
-    return (
-        <>
-            {myWorksContainerArray.map(el => <React.Fragment key={el.id}>
-                <div className={s.singleUnit}>
-                    <span className={s.title}>{el.title}</span>
-                    <div className={s.imgContainer}>
-                        <img src={el.img} alt=""/>
-                        <nav className={s.imgContainerNav}>
-                            <a href={el.code}>Code</a>
-                            <a href={el.page}>Page</a>
-                        </nav>
-                    </div>
-                </div>
-            </React.Fragment>)
-            }
-        </>
-    );
+  return (
+    <>
+      {myWorksContainerArray.map(el => <React.Fragment key={el.id}>
+        <div className={s.singleUnit}>
+          <span className={s.title}>{el.title}</span>
+          <div className={s.imgContainer}>
+            <img src={el.img} alt=""/>
+            <nav className={s.imgContainerNav}>
+              <a href={el.code}>Code</a>
+              <a href={el.page}>Page</a>
+            </nav>
+          </div>
+        </div>
+      </React.Fragment>)
+      }
+    </>
+  );
 };
 
 
